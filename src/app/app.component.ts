@@ -17,6 +17,6 @@ export class AppComponent {
   }
 
   navigateToHome() {
-    this.router.navigateByUrl('/')
+    this.router.navigateByUrl('/');
   }
 }
