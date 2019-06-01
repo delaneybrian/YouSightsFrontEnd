@@ -1,9 +1,10 @@
 /* tslint:disable */
-import { WordCount } from './word-count';
 export interface Video {
   id?: number;
+  title?: string;
+  embedUrl?: string;
   url?: string;
   likes?: number;
   dislikes?: number;
-  wordCounts?: Array<WordCount>;
+  words?: string;
 }

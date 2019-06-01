@@ -1,23 +1,8 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>{{ title }}</h1>
 
-  <div *ngFor="let topic of topics">
-    <button (click)="getVideosForTopic(topic.id)" mat-button>
-      {{ topic.name }}
-    </button>
-  </div>
-
-  <div>
-    {{errorMessage}}
-  </div>
-
-  <div *ngFor="let video of videos">
-    <iframe width="560" height="315" [src]="video.url | safe" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    <div *ngFor="let wordCount of video.wordCounts">
-        <p>{{wordCount.word}} - {{wordCount.count}}</p>
-    </div>
-  </div>
-</div>
+<mat-toolbar color="primary" class="navbar">
+  <div (click) = "navigateToHome()">{{title}}</div>
+  <div (click) = "navigateToAbout()">About</div>
+</mat-toolbar>
 
 <router-outlet></router-outlet>

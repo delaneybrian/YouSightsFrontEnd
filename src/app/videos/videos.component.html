@@ -1,0 +1,15 @@
+<div *ngFor="let topic of topics">
+    <button (click)="getVideosForTopic(topic.id)" mat-button>
+      {{ topic.name }}
+    </button>
+  </div>
+
+  <div>
+    {{errorMessage}}
+  </div>
+
+  <div *ngFor="let video of videos">
+    <h3>{{video.title}}</h3>
+    <iframe width="560" height="315" [src]="video.embedUrl | safe" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <p>{{video.words}}</p>
+  </div>

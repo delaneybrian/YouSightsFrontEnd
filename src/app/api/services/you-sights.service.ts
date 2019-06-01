@@ -13,11 +13,10 @@ import { Video } from '../models/video';
   providedIn: 'root',
 })
 class YouSightsService extends __BaseService {
-
-  public rootUrl: string = "https://localhost:44335";
-
   static readonly GetPath = '/api/YouSights';
   static readonly Get_1Path = '/api/YouSights/{id}';
+
+  rootUrl = "https://localhost:44335";
 
   constructor(
     config: __Configuration,
@@ -86,7 +85,7 @@ class YouSightsService extends __BaseService {
     );
   }
   /**
-   * @param id topic Id
+   * @param id undefined
    * @return Success
    */
   Get_Videos_By_Topic_Id(id: number): __Observable<Array<Video>> {
