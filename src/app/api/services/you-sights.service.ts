@@ -6,6 +6,7 @@ import { ApiConfiguration as __Configuration } from '../api-configuration';
 import { StrictHttpResponse as __StrictHttpResponse } from '../strict-http-response';
 import { Observable as __Observable } from 'rxjs';
 import { map as __map, filter as __filter } from 'rxjs/operators';
+import { environment } from '../../../environments/environment';
 
 import { Topic } from '../models/topic';
 import { Video } from '../models/video';
@@ -16,7 +17,7 @@ class YouSightsService extends __BaseService {
   static readonly GetPath = '/api/YouSights';
   static readonly Get_1Path = '/api/YouSights/{id}';
 
-  rootUrl = "https://localhost:44335";
+  rootUrl = environment.backendApiUrl;
 
   constructor(
     config: __Configuration,

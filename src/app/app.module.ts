@@ -13,6 +13,8 @@ import {SafeEmbedPipe} from './pipes/SafeEmbedPipe';
 import { AboutComponent } from './about/about.component';
 import { VideosComponent } from './videos/videos.component';
 
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,8 @@ import { VideosComponent } from './videos/videos.component';
     MatButtonModule,
     MatToolbarModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
