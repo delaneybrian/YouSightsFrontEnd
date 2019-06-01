@@ -1,5 +1,5 @@
 export const environment = {
-  production: true,
-  backendApiUrl: '${BACKEND_API_URL}',
-  defaultLanguage: '${DEFAULT_LANGUAGE}'
+  production: false,
+  backendApiUrl: 'https://localhost:44335',
+  defaultLanguage: 'eng'
 };

@@ -14,10 +14,4 @@ RUN rm -rf /usr/share/nginx/html/*
 
 COPY nginx.conf /etc/nginx/nginx.conf
 
-COPY --from=build  /usr/angular-workdir/dist/angular-docker /usr/share/nginx/html
-
-RUN echo "mainFileName=\"\$(ls /usr/share/nginx/html/main*.js)\" && \
-          envsubst '\$BACKEND_API_URL \$DEFAULT_LANGUAGE ' < \${mainFileName} > main.tmp && \
-          mv main.tmp  \${mainFileName} && nginx -g 'daemon off;'" > run.sh
-
-ENTRYPOINT ["sh", "run.sh"]
+COPY --from=build  /usr/angular-workdir/dist/yousights /usr/share/nginx/html
